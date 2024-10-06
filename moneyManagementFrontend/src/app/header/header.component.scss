@@ -1,0 +1,32 @@
+#header {
+  background-color: #EEE;
+  height: 150px;
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+
+  h1{
+    margin: auto;
+  }
+
+  nav {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        cursor: pointer;
+        display: inline;
+        margin: 10px;
+
+        a{
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+}

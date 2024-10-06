@@ -1,0 +1,108 @@
+POST http://localhost:8080/api/subscribe/form
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "",
+  "password": "",
+  "email": "",
+  "passwordConfirm": ""
+}
+
+<> 2024-10-06T171213.200.txt
+
+###
+
+POST http://localhost:8080/api/subscribe/form
+Content-Type: application/json
+Content-Length: 85
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "",
+  "password": "bonjour",
+  "email": "",
+  "passwordConfirm": ""
+}
+
+<> 2024-10-06T171205.400.txt
+
+###
+
+POST http://localhost:8080/api/subscribe/form
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "",
+  "password": "",
+  "email": "",
+  "passwordConfirm": ""
+}
+
+<> 2024-10-06T171157.200.txt
+
+###
+
+POST http://localhost:8080/api/subscribe/form
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "",
+  "password": "",
+  "email": "",
+  "passwordConfirm": ""
+}
+
+<> 2024-10-06T171155.200.txt
+
+###
+
+POST http://localhost:8080/api/subscribe/form
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "",
+  "password": "",
+  "email": "",
+  "passwordConfirm": ""
+}
+
+<> 2024-10-06T171025.200.txt
+
+###
+
+POST http://localhost:8080/api/subscribe/form
+Content-Type: application/json
+Content-Length: 78
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "username": "",
+  "password": "",
+  "email": "",
+  "passwordConfirm": ""
+}
+
+<> 2024-10-06T171024.200.txt
+
+###
+

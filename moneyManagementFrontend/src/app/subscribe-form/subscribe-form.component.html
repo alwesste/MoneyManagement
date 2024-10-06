@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" id="username" formControlName="username" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" formControlName="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Mot de passe</label>
+    <input type="password" id="password" formControlName="password" required>
+  </div>
+
+  <div class="form-group">
+    <label for="passwordConfirm">Confirmez votre mot de passe</label>
+    <input type="password" id="passwordConfirm" formControlName="passwordConfirm" required>
+  </div>
+
+  <button>Subscribe</button>
+</form>
