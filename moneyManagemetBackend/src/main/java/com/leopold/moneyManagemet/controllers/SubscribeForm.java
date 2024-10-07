@@ -15,9 +15,7 @@ public class SubscribeForm {
 
     @PostMapping("/form")
     public ResponseEntity<?> handleFormSubmission(@RequestBody SubscriberData subscriberData) {
-        System.out.println(subscriberData.getPassword());
 
-        // Basic validation
         if (subscriberData.getPassword() == null || !subscriberData.getPassword().equals(subscriberData.getPasswordConfirm())) {
             return new ResponseEntity<>("Passwords do not match", HttpStatus.BAD_REQUEST);
         }
