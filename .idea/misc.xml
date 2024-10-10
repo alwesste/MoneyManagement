@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/moneyManagemetBackend/pom.xml" />
+        <option value="$PROJECT_DIR$/moneyManagementBackend/pom.xml" />
       </list>
     </option>
   </component>

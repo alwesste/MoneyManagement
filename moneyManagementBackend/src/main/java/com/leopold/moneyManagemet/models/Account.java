@@ -22,6 +22,10 @@ public class Account {
     @Column(name = "comment")
     private String Comment;
 
+    @ManyToOne
+    @JoinColumn(name = "subscriber_id")
+    private SubscriberData subscriber ;
+
     public int getId() {
         return id;
     }
@@ -52,5 +56,13 @@ public class Account {
 
     public void setComment(String comment) {
         Comment = comment;
+    }
+
+    public SubscriberData getSubscriber() {
+        return subscriber;
+    }
+
+    public void setSubscriber(SubscriberData subscriber) {
+        this.subscriber = subscriber;
     }
 }

@@ -3,7 +3,7 @@ package com.leopold.moneyManagemet.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "subscriberData")
+@Table(name = "subscriberdata")
 
 public class SubscriberData {
 
