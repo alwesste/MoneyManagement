@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {Router} from "@angular/router";
+import {SubscriberDataService} from "../subscriber-data.service";
+import {LoginResponse} from "../models/LoginResponse";
 
 @Component({
   selector: 'app-login-form',
@@ -22,20 +24,22 @@ export class LoginFormComponent {
   constructor(
     private http: HttpClient,
     private router: Router,
-  ) {}
+    private subscriberDataService: SubscriberDataService
+  ) {
+  }
 
-  onSubmit() : void {
+  onSubmit(): void {
     if (this.form.valid) {
-      console.log(this.form.value);
-      this.http.post('http://localhost:8080/api/connexion', this.form.value)
+      console.log("form value ", this.form.value);
+      this.http.post<LoginResponse>('http://localhost:8080/api/connexion', this.form.value)
         .subscribe({
           next: response => {
             console.log('Réponse du serveur:', response);
-            const username = this.form.get('username')?.value;
-            const password = this.form.get('password')?.value;
+            const username: string = this.form.get('username')?.value;
+            const userId = response.userId;
 
             sessionStorage.setItem("username", username);
-            sessionStorage.setItem("password", password);
+            sessionStorage.setItem("userId", userId.toString());
 
             this.router.navigate([`/account/${username}`]);
           },

@@ -7,7 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/subscribe")
@@ -16,6 +18,8 @@ public class SubscribeForm {
 
     @Autowired
     private SubscriberService subscriberService;
+
+
 
     @PostMapping("/form")
     public ResponseEntity<?> handleFormSubmission(@RequestBody SubscriberData subscriberData) {
@@ -28,10 +32,13 @@ public class SubscribeForm {
         return new ResponseEntity<>(Map.of("message", "Form submitted successfully!"), HttpStatus.OK);
     }
 
-    @GetMapping("/{username}")
-    public ResponseEntity<?> sendNameOfSubscriber(@PathVariable String username) {
-        SubscriberData subscriberData = subscriberService.getSubscriberByUsername(username);
-        System.out.println("requete get fontionne" + subscriberData);
-        return new ResponseEntity<>(subscriberData, HttpStatus.OK);
+    @GetMapping("/getSubscriber")
+    public ResponseEntity<SubscriberData> getSubscriberId(@RequestParam int id) {
+        Optional<SubscriberData> subscriberData = subscriberService.getSubscriberById(id);
+        if (subscriberData.isPresent()) {
+            return ResponseEntity.ok(subscriberData.get()); // HTTP 200 OK with the subscriber data
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build(); // HTTP 404 Not Found
+        }
     }
 }

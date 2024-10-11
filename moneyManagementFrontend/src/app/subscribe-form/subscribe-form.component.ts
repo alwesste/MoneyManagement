@@ -30,11 +30,11 @@ export class SubscribeFormComponent {
   constructor(
     private http: HttpClient,
     private router: Router,
-  ) {}
+  ) {
+  }
 
   onSubmit(): void {
     if (this.form.valid) {
-      console.log(this.form.value);
       this.http.post('http://localhost:8080/api/subscribe/form', this.form.value)
         .subscribe({
           next: response => {

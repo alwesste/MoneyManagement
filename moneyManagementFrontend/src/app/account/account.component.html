@@ -1,12 +1,18 @@
-<p>Vous êtes connecté ! {{username}}</p>
+<p>Vous êtes connecté ! {{ username }} votre ID {{userId}}</p>
 
-<form action="post">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div>
-    <label for="spending">Votre dépense</label>
-    <input type="text" id="spending">
+    <label for="spendingType">Quel genre depenses avez-vous effectue</label>
+    <input type="text" id="spendingType" formControlName="spendingType">
+  </div>
+  <div>
+    <label for="amount">Votre montant</label>
+    <input type="text" id="amount" formControlName="amount">
   </div>
   <div>
     <label for="comment">Commentaire</label>
-    <input type="text" id="comment">
+    <input type="text" id="comment" formControlName="comment">
   </div>
- </form>
+
+  <button>Send</button>
+</form>

@@ -6,7 +6,6 @@ import java.util.Date;
 
 @Entity
 @Table(name = "account")
-
 public class Account {
 
     @Id
@@ -16,11 +15,14 @@ public class Account {
     @Column(name = "date")
     private Date date;
 
-    @Column(name = "spendingType")
-    private String SpendingType;
+    @Column(name = "spending_type")
+    private String spendingType;
 
     @Column(name = "comment")
-    private String Comment;
+    private String comment;
+
+    @Column(name = "amount")
+    private double amount;
 
     @ManyToOne
     @JoinColumn(name = "subscriber_id")
@@ -43,19 +45,19 @@ public class Account {
     }
 
     public String getSpendingType() {
-        return SpendingType;
+        return spendingType;
     }
 
     public void setSpendingType(String spendingType) {
-        SpendingType = spendingType;
+        this.spendingType = spendingType;
     }
 
     public String getComment() {
-        return Comment;
+        return comment;
     }
 
     public void setComment(String comment) {
-        Comment = comment;
+        this.comment = comment;
     }
 
     public SubscriberData getSubscriber() {
@@ -64,5 +66,13 @@ public class Account {
 
     public void setSubscriber(SubscriberData subscriber) {
         this.subscriber = subscriber;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 }

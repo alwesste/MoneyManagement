@@ -5,29 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17e5973a-92a1-4020-bb3e-9a51aadf6c17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/AccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/LoginForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/LoginData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/SubscriberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpClient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpClient.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/dto/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/dto/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/src/main/java/com/leopold/moneyManagemet/MoneyManagemetApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/MoneyManagemetApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/src/main/java/com/leopold/moneyManagemet/controllers/SubscribeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/SubscribeForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/src/main/java/com/leopold/moneyManagemet/models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/src/main/java/com/leopold/moneyManagemet/models/SubscriberData.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/SubscriberData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/src/main/java/com/leopold/moneyManagemet/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/repositories/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/src/main/java/com/leopold/moneyManagemet/repositories/SubscriberDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/repositories/SubscriberDataRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/src/main/java/com/leopold/moneyManagemet/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagemetBackend/src/test/java/com/leopold/moneyManagemet/MoneyManagemetApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/test/java/com/leopold/moneyManagemet/MoneyManagemetApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/AccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/AccountForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/LoginForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/SubscribeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/SubscribeForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/SubscriberData.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/SubscriberData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/repositories/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/SubscriberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/SubscriberService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +57,7 @@
     &quot;Spring Boot.MoneyManagemetApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/leopo/IdeaProjectsCom/moneyManagemet&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/document/Openclassrooms/javaTraining/snapface debutez avec angular OC&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -136,7 +124,9 @@
       <workItem from="1728408189393" duration="5032000" />
       <workItem from="1728455904267" duration="19059000" />
       <workItem from="1728480349669" duration="2780000" />
-      <workItem from="1728542757902" duration="5171000" />
+      <workItem from="1728542757902" duration="19933000" />
+      <workItem from="1728576997493" duration="9902000" />
+      <workItem from="1728628822960" duration="12990000" />
     </task>
     <servers />
   </component>

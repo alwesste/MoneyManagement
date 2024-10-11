@@ -26,13 +26,18 @@ public class SubscriberService {
         return subscriberDataRepository.findByUsername(username);
     }
 
-    public boolean validateLogin(String username, String password) {
+    public Iterable<SubscriberData> getAllSubscribers() {
+        return subscriberDataRepository.findAll();
+    }
+
+    public SubscriberData validateLogin(String username, String password) {
         SubscriberData subscriberData = getSubscriberByUsername(username);
+
         if (subscriberData.getPassword().equals(password) && subscriberData.getUsername().equals(username)) {
-            return true;
-        } else {
-            return false;
+            System.out.println("reponse du serveur "+ subscriberData.getId());
+            return subscriberData;
         }
+        return null;
     }
 
 }
