@@ -5,7 +5,6 @@ import com.leopold.moneyManagemet.repositories.SubscriberDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -16,6 +15,14 @@ public class SubscriberService {
 
     public SubscriberData addSubscriber(SubscriberData subscriberData) {
         return subscriberDataRepository.save(subscriberData);
+    }
+
+    public Iterable<SubscriberData> getAllSubscriber(SubscriberData subscriberData) {
+        return subscriberDataRepository.findAll();
+    }
+
+    public boolean existSubscriber(SubscriberData subscriberData) {
+        return subscriberDataRepository.findByUsername(subscriberData.getUsername()) != null;
     }
 
     public Optional<SubscriberData> getSubscriberById(Integer id) {

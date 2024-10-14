@@ -1,18 +1,61 @@
-<p>Vous êtes connecté ! {{ username }} votre ID {{userId}}</p>
+<p>Vous êtes connecté ! {{ username }} votre ID {{ userId }}</p>
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="spendingType">Quel genre depenses avez-vous effectue</label>
+  <div class="form-group">
+    <label for="spendingType">Quel genre dépenses avez-vous effectuées</label>
     <input type="text" id="spendingType" formControlName="spendingType">
   </div>
-  <div>
+  <div class="form-group">
     <label for="amount">Votre montant</label>
     <input type="text" id="amount" formControlName="amount">
   </div>
-  <div>
-    <label for="comment">Commentaire</label>
+  <div class="form-group">
+    <label for="comment">Ecrivez un commentaire</label>
     <input type="text" id="comment" formControlName="comment">
   </div>
 
   <button>Send</button>
+
+  <div>
+    <h2>Total de vos depenses: {{totalBalance}}</h2>
+  </div>
+
 </form>
+
+
+<div class="group">
+  <button (click)="newGroup()">creer un groupe</button>
+</div>
+
+
+
+<div class="spending">
+
+  <div class="spending-title">
+    <h3>Liste de vos depenses personelle </h3>
+    <button (click)="getRemove()">{{ showSpending ? 'Retirer' : ' Faire apparaitre' }}</button>
+  </div>
+
+    <ul *ngIf="showSpending">
+    <li *ngFor="let spending of spendings">
+      <p>
+        <strong>Date : </strong>
+        <span>{{ spending.date | date:'dd/MM/yyyy' }}</span>
+      </p>
+      <p>
+        <strong>Montant de votre dépense</strong>
+        <span>{{ spending.amount }} $</span>
+      </p>
+      <p>
+        <strong>Quel genre de dépenses</strong>
+        <span>{{ spending.spendingType }}</span>
+      </p>
+      <p>
+        <strong>Votre commentaire</strong>
+        <span>{{ spending.comment }}</span>
+      </p>
+      <button (click)="deleteSpending(spending.id)">Delete</button>
+    </li>
+  </ul>
+</div>
+

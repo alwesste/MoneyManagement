@@ -19,6 +19,7 @@
     <label for="passwordConfirm">Confirmez votre mot de passe</label>
     <input type="password" id="passwordConfirm" formControlName="passwordConfirm" required>
   </div>
+  <span class="error" *ngIf="errorMessage"> {{errorMessage}} </span>
 
   <button>Subscribe</button>
 </form>

@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17e5973a-92a1-4020-bb3e-9a51aadf6c17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/dto/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/dto/LoginResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/AccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/AccountForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/AccountForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/LoginForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/SubscribeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/SubscribeForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/AccountForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/SubscribeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/SubscribeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/dto/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/dto/LoginResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/SubscriberData.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/SubscriberData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/repositories/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/SubscriberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/SubscriberService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +34,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -126,7 +126,9 @@
       <workItem from="1728480349669" duration="2780000" />
       <workItem from="1728542757902" duration="19933000" />
       <workItem from="1728576997493" duration="9902000" />
-      <workItem from="1728628822960" duration="12990000" />
+      <workItem from="1728628822960" duration="22051000" />
+      <workItem from="1728806239834" duration="29688000" />
+      <workItem from="1728888057238" duration="19031000" />
     </task>
     <servers />
   </component>
@@ -150,6 +152,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.sql.SQLSyntaxErrorException" package="java.sql" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="jakarta.persistence.TransactionRequiredException" package="jakarta.persistence" />
+          <option name="timeStamp" value="13" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -10,7 +10,7 @@ public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column(name = "date")
     private Date date;
@@ -28,13 +28,6 @@ public class Account {
     @JoinColumn(name = "subscriber_id")
     private SubscriberData subscriber ;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public Date getDate() {
         return date;
@@ -74,5 +67,13 @@ public class Account {
 
     public void setAmount(double amount) {
         this.amount = amount;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

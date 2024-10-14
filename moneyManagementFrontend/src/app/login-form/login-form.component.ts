@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {Router} from "@angular/router";
-import {SubscriberDataService} from "../subscriber-data.service";
 import {LoginResponse} from "../models/LoginResponse";
 
 @Component({
@@ -24,7 +23,6 @@ export class LoginFormComponent {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private subscriberDataService: SubscriberDataService
   ) {
   }
 

@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {SubscriberDataService} from "../subscriber-data.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {DatePipe, NgForOf, NgIf} from "@angular/common";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-account',
@@ -9,61 +10,119 @@ import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from "@angular
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgForOf,
+    DatePipe,
+    NgIf,
   ],
   templateUrl: './account.component.html',
   styleUrl: './account.component.scss'
 })
 export class AccountComponent implements OnInit {
-  //private subscriberIds: number[] = []; // Déclarez un tableau pour stocker les IDs des abonnés
   username: string | null = null;
   userId: string | null = null;
+  spendings: any[] = [];
+  showSpending: boolean = true;
+  totalBalance: number = 0;
 
   form: FormGroup = new FormGroup({
     spendingType: new FormControl(''),
     amount: new FormControl(''),
     comment: new FormControl(''),
-    date: new FormControl(new Date())
+    date: new FormControl(new Date()),
   })
 
   constructor(
     private http: HttpClient,
-    private subscriberDataService: SubscriberDataService) {
+    private router: Router,
+  ) {
   }
 
   ngOnInit(): void {
     this.username = sessionStorage.getItem('username');
     this.userId = sessionStorage.getItem('userId')
-     //this.getSubscriberById
+    if (this.userId) {
+      this.form.patchValue({
+        subscriber: Number(this.userId)  // Make sure to convert userId to a number
+      });
+      this.getSpending()
+      this.getSpendingTotalBalance(Number(this.userId))
+    } else {
+      console.error("UserId is missing in session storage!");
+    }
   };
 
-  onSubmit(): void {
-  const accountData = this.form.value;
+  getSpending() {
+    this.http.get(`http://localhost:8080/api/spending/${this.userId}`).subscribe({
+      next: (response: any) => {
+        this.spendings = response.reverse()
+        console.log("Requête envoye qvec succes", this.spendings)
+      },
+      error: error => {
+        console.log(error);
+      },
+      complete:() => console.log("Requête terminer")
+    })
+  }
 
-    if(this.form.valid) {
-      this.http.post("http://localhost:8080/api/accountSend",accountData).subscribe({
-        next: response => {
-          console.log("reponse de la requete a accountSend", response)
-          console.log("success !", this.form.value)
+  deleteSpending(spendingId: number) {
+    this.http.delete(`http://localhost:8080/api/spending/${spendingId}`)
+      .subscribe({
+      next: () => {
+        // Retirer la dépense du tableau local
+        this.spendings = this.spendings.filter(spending => spending.id !== spendingId);
+        this.getSpendingTotalBalance(Number(this.userId))
+        console.log("Dépense supprimée avec succès");
+      },
+      error: error => {
+        console.error("Erreur lors de la suppression de la dépense", error);
+      }
+    });
+  }
+
+  getSpendingTotalBalance(subscriberId: number) {
+    this.http.get<number>(`http://localhost:8080/api/spending/totalBalance/${subscriberId}`)
+      .subscribe({
+        next: (response: number) => {
+          this.totalBalance = response;
         },
         error: error => {
-          console.log("une erreur est survenu", error)
-        },
-        complete: () => console.log("Requete termine")
+          console.log("erreur lors de la recuperation du solde", error);
+        }
+      })
+  }
+
+  getRemove() {
+    this.showSpending = !this.showSpending;
+  }
+
+  onSubmit(): void {
+    const accountData = this.form.value;
+
+    if (this.form.valid) {
+      console.log("Account Data being sent:", accountData); // Add this log to check data before sending
+
+      this.http.post("http://localhost:8080/api/accountSend", {
+        ...accountData,
+        subscriber: {
+          id: this.userId // assuming this.userId is the ID of the subscriber
+        }
+      }).subscribe({
+          next: response => {
+            console.log("success !", accountData)
+            this.getSpending()
+            this.getSpendingTotalBalance(Number(this.userId))
+          },
+          error: error => {
+            console.log("une erreur est survenu", error)
+          },
+          complete: () => console.log("Requete termine")
         }
       )
     }
   }
 
-  // getSubscriberById(id: number): void {
-  //   this.subscriberDataService.getSubscriberById(id).subscribe({
-  //     next: subscriber => {
-  //       console.log("Subscriber data:", subscriber);
-  //       // Handle the received subscriber data as needed
-  //     },
-  //     error: err => {
-  //       console.error("Error fetching subscriber:", err);
-  //     }
-  //   });
-  // }
+  newGroup() {
+    this.router.navigate(["/group"]);
+  }
 }
