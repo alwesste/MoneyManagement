@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,12 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './group.component.scss'
 })
 export class GroupComponent {
+    spendings: any[] = [];
+
+constructor (
+  private http: HttpClient
+ ) {}
 
 
   onSubmit(): void {
-
-  }
-
+    }
 }
 
 

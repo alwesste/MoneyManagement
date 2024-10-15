@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17e5973a-92a1-4020-bb3e-9a51aadf6c17" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/AccountForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/LoginForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/SubscribeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/controllers/SubscribeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/dto/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/dto/LoginResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/SubscriberData.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/models/SubscriberData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/repositories/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/SubscriberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/services/SubscriberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/MoneyManagemetApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/moneyManagementBackend/src/main/java/com/leopold/moneyManagemet/MoneyManagemetApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +35,12 @@
 }</component>
   <component name="ProjectId" id="2n3z4214cq4OW2us5TKJNGoflPi" />
   <component name="ProjectViewState">
+    <option name="flattenModules" value="true" />
+    <option name="flattenPackages" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -57,13 +54,16 @@
     &quot;Spring Boot.MoneyManagemetApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/document/Openclassrooms/javaTraining/snapface debutez avec angular OC&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/leopo/IdeaProjectsCom/moneyManagemet&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\leopo\\IdeaProjectsCom\\moneyManagemet\\moneyManagementFrontend\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -73,7 +73,7 @@
       <recent name="com.leopold.moneyManagemet.dtos" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.MoneyManagemetApplication">
+  <component name="RunManager">
     <configuration name="login-form.component.ts" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/moneyManagementFrontend/src/app/login-form/login-form.component.ts" typescript-loader="bundled" working-dir="$PROJECT_DIR$/moneyManagementFrontend/src/app/login-form">
       <method v="2" />
     </configuration>
@@ -91,20 +91,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.MoneyManagemetApplication" />
-        <item itemvalue="Node.js.login-form.component.ts" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -129,11 +115,15 @@
       <workItem from="1728628822960" duration="22051000" />
       <workItem from="1728806239834" duration="29688000" />
       <workItem from="1728888057238" duration="19031000" />
+      <workItem from="1728975047648" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ts" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
